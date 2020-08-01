@@ -21,7 +21,7 @@ onSubmit(e) {
   };
   console.log(newUser);
   //////////////////////////////////////////////////////////////////////////////////////////////////////////
-  axios.post('api/users/add', newUser)
+  axios.post('/api/users/add', newUser)
   .then(res => console.log(res.data))
   .catch(err => console.log(err));
 

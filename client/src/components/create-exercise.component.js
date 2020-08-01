@@ -22,7 +22,7 @@ export default class CreateExercise extends Component {
   }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   componentDidMount(){
-  axios.get('api/users/')
+  axios.get('/api/users/')
   .then(response => {
     if (response.data.length > 0) {
       this.setState({
@@ -72,7 +72,7 @@ export default class CreateExercise extends Component {
     };
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     console.log(exercise);
-    axios.post('api/exercises/add', exercise)
+    axios.post('/api/exercises/add', exercise)
       .then(res => console.log(res.data))
       .catch(err=>console.log(err));
     window.location = '/';

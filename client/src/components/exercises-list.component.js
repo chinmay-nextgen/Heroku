@@ -21,7 +21,7 @@ export default class ExercisesList extends Component {
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 componentDidMount() {
-   axios.get('api/exercises/')
+   axios.get('/api/exercises/')
    .then(response => {
    this.setState({ exercises: response.data });
      })
@@ -32,7 +32,7 @@ componentDidMount() {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
      deleteExercise(id) {
-     axios.delete('api/exercises/'+id)
+     axios.delete('/api/exercises/'+id)
        .then(res => console.log(res.data));
      this.setState({
        exercises: this.state.exercises.filter(el => el._id !== id)
