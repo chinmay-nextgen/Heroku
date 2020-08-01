@@ -11,7 +11,7 @@ router.route('/').get((req, res) => {
 
 router.route('/add').post((req, res) => {
   const username = req.body.username;
-
+    console.log('user added');
   const newUser = new User({username});// will creat new user
   newUser.save()// the new user is saved to the database with the save() method
     .then(() => res.json('User added!'))
